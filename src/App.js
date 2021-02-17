@@ -14,6 +14,7 @@ function App() {
           </Route>
           <Route path='/'>
             <TinderCards />
+            <SwipeButtons />
           </Route>
         </Switch>
       </Router>

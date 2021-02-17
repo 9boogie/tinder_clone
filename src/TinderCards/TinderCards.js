@@ -1,18 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TinderCard from 'react-tinder-card';
 import './TinderCards.css';
+import database from "../firebase";
 
 function TinderCards() {
-  const [people, setPeople] = useState([
-    {
-      name: 'Harry Potter',
-      url: 'https://cnet2.cbsistatic.com/img/-5XzXScvtcX732sw1sYo_OCsI-8=/940x0/2016/09/19/79530bcb-7c95-4a67-bc33-2119c828e6e0/harry-potter-philosophers-stone.jpg'
-    },
-    {
-      name: 'Malfoy',
-      url: 'https://i.pinimg.com/736x/11/c5/a3/11c5a3dc93a313731e411fc0baf3e109.jpg'
-    }
-  ]);
+  const [people, setPeople] = useState([]);
+
+  useEffect(() => {
+     
+    const unsubscribe = database
+      .collection('people')
+      .onSnapshot((snapshot) => 
+       setPeople(snapshot.docs.map((doc) => doc.data()))
+     );
+
+      return () => {
+        unsubscribe();
+      }
+
+  }, [])
 
   // BAD WAY
   // const people = [];
@@ -26,7 +32,7 @@ function TinderCards() {
       <h1>Tinder Cards</h1>
 
       <div className="tinderCards__cardContainer">
-        
+
       </div>
 
       {people.map(person => (
