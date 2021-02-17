@@ -3,17 +3,19 @@ import Header from './Header/Header';
 import TinderCards from './TinderCards/TinderCards';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SwipeButtons from './SwipeButtons/SwipeButtons';
+import Chats from './Chats/Chats';
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
         <Switch>
           <Route path='/chat'>
-            <h1>I am the chatpage</h1>
+            <Header backButton='/' />
+            <Chats />
           </Route>
           <Route path='/'>
+            <Header />  
             <TinderCards />
             <SwipeButtons />
           </Route>
