@@ -24,10 +24,10 @@ function Chats() {
         profilePic=""
       />
       <Chat 
-        name='Park Bo Young'
-        message='Annyung!'
+        name='Harry Potter'
+        message='Hello I am Harry Potter'
         timestamp="3 days ago"
-        profilePic="https://static.wikia.nocookie.net/drama/images/2/2b/Park_Bo_Young.jpg/revision/latest/top-crop/width/360/height/450?cb=20170404103859&path-prefix=de"
+        profilePic="https://pyxis.nymag.com/v1/imgs/171/429/c95b07becc2bef532d9669b4824ea4386f-08-harry-potter.rsquare.w1200.jpg"
       />
     </div>
   )
