@@ -10,11 +10,11 @@ Tinder is a simple, single-page Tinder clone. Single Page Tinder with following 
 Practice of HTML, CSS, React front-end skills, and Firebase on the backend.
 
 ## Final Product
-!["Screenshot of Main Page"]()
+!["Screenshot of Main Page"](https://github.com/9boogie/tinder_clone/blob/master/docs/MainPage.png)
 
-!["Screenshot of Chat List"]()
+!["Screenshot of Chat List"](https://github.com/9boogie/tinder_clone/blob/master/docs/ChatList.png)
 
-!["Screenshot of Chat"]()
+!["Screenshot of Chat"](https://github.com/9boogie/tinder_clone/blob/master/docs/Chat.png)
 
 ## Getting Started
 
